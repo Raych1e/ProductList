@@ -1,0 +1,8 @@
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase\obj\Debug\ProductsListDatabase.csproj.AssemblyReference.cache
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase\obj\Debug\ProductsListDatabase.csproj.CoreCompileInputs.cache
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase\obj\Debug\ProductsListDatabase.csproj.CopyComplete
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase.dll.config
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase\obj\Debug\ProductsListDatabase.dll
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase\obj\Debug\ProductsListDatabase.pdb
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase.dll
+C:\Users\lunis\source\repos\ProductsList\ProductsListDatabase.pdb
