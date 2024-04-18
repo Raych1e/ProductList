@@ -1,0 +1,78 @@
+﻿<Window x:Class="ProductsList.Pages.AddNewItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductsList.Pages"
+        mc:Ignorable="d"
+        Title="Добавление товара" Height="450" Width="1000" Icon="/Images/logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBlock Name="TBLabel" FontWeight="Bold" FontSize="24" VerticalAlignment="Center">Добавление товара</TextBlock>
+            <Ellipse Width="30" Height="30" Margin="5 0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="/Images/icon.ico"></ImageBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </StackPanel>
+
+        <StackPanel Margin="5 0 0 0" Grid.Column="0" Grid.Row="1">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="0, 15, 0, 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock>Артикуль</TextBlock>
+            <TextBox Name="TBArticle" Text="{Binding ProductArticleNumber}"></TextBox>
+            <TextBlock>Название товара</TextBlock>
+            <TextBox Name="TBProductName" Text="{Binding ProductName}"></TextBox>
+            <TextBlock>Описание товара</TextBlock>
+            <TextBox Name="TBDescription" Text="{Binding ProductDescription}"></TextBox>
+            <TextBlock>Категория товара</TextBlock>
+            <ComboBox Name="CBCategory" ItemsSource="{Binding category}" DisplayMemberPath="Name" SelectedItem="{Binding ProductCategory1}"></ComboBox>
+            <TextBlock>Производитель товара</TextBlock>
+            <ComboBox Name="CBManafacturers" ItemsSource="{Binding manafacturers}" DisplayMemberPath="Name" SelectedItem="{Binding Manafacturer}"></ComboBox>
+            <TextBlock>Поставщик товара</TextBlock>
+            <ComboBox Name="CBProvider" ItemsSource="{Binding providers}" DisplayMemberPath="Name" SelectedItem="{Binding Provider}"></ComboBox>
+        </StackPanel>
+
+        <StackPanel Margin="5 0 0 0" Grid.Column="1" Grid.Row="1">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Margin" Value="0, 15, 0, 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock>Цена</TextBlock>
+            <TextBox Name="TBPrice" Text="{Binding ProductCost}"></TextBox>
+            <TextBlock>Действующая скидка (%)</TextBlock>
+            <TextBox Name="TBDiscount" Text="{Binding ProductDiscountAmount}"></TextBox>
+            <TextBlock>Максимальная скидка(%)</TextBlock>
+            <TextBox Name="TBMaxDiscount" Text="{Binding ProductMaxDiscount}"></TextBox>
+            <TextBlock>Количество</TextBlock>
+            <TextBox Text="{Binding ProductQuantityInStock}" Name="TBCount"></TextBox>
+            <TextBlock>Единица измерения</TextBlock>
+            <ComboBox Name="CBUnit" ItemsSource="{Binding units}" DisplayMemberPath="Name" SelectedItem="{Binding Unit1}"></ComboBox>
+            <Button Click="AddImage_Click" Margin="0 35 0 0">Изображение</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="1" Grid.Column="3" Name="TBPlaceForImage" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Место для изображения</TextBlock>
+        <Rectangle Name="ImagePreview" Stroke="{StaticResource SecondBackgroundColor}" StrokeThickness="5" Margin="50 70" StrokeDashArray="5" Grid.Row="1" Grid.Column="3">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="{Binding ProductPhoto}"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        
+        <Button Click="SaveChanges_Click" Grid.Row="2" Grid.ColumnSpan="3">Сохранить и выйти</Button>
+    </Grid>
+</Window>

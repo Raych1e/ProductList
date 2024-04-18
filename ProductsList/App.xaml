@@ -1,0 +1,32 @@
+﻿<Application x:Class="ProductsList.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProductsList"
+             xmlns:converters="clr-namespace:ProductsList.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="SecondBackgroundColor">
+            <SolidColorBrush.Color>
+                <Color A="255" R="118" G="227" B="131"></Color>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <SolidColorBrush x:Key="AccentColor">
+            <SolidColorBrush.Color>
+                <Color A="255" R="73" G="140" B="81"></Color>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource AccentColor}"></Setter>
+        </Style>
+
+        <converters:NullToByte x:Key="nullToByte"/>
+
+    </Application.Resources>
+</Application>
